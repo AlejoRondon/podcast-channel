@@ -1,0 +1,53 @@
+nav {
+  border: dashed 1px green;
+}
+header {
+  border: dashed 1px blue;
+}
+section.episodes {
+  border: dashed 1px red;
+}
+section.history {
+  border: dashed 1px yellow;
+}
+
+section.stellar-guests {
+  border: dashed 1px crimson;
+}
+section.our-topics {
+  border: dashed 1px darksalmon;
+}
+section.last-novelties {
+  border: dashed 1px dimgray;
+}
+footer {
+  border: dashed 1px dodgerblue;
+}
+footer p {
+  background-color: honeydew;
+}
+footer div {
+  background-color: gainsboro;
+}
+
+/* https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
+/* https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c */
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width: 640px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media (min-width: 768px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1024px) {
+  /*992 is also used*/
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1200px) {
+  /* hi-res laptops and desktops */
+}
