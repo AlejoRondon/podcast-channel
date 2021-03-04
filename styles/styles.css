@@ -1,4 +1,5 @@
 /* https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
+/* https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c */
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 }
@@ -8,10 +9,11 @@
 @media (min-width: 640px) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
-@media (min-width: 768x) {
+@media (min-width: 768px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 @media (min-width: 1024px) {
+  /*992 is also used*/
   /* big landscape tablets, laptops, and desktops */
 }
 @media (min-width: 1200px) {
