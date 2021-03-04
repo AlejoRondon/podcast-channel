@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 /* https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
 /* https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c */
 @media (min-width: 320px) {
