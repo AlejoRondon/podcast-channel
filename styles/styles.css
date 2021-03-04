@@ -5,29 +5,40 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 nav {
-  border: dashed 1px green;
+  /* border: dashed 1px green; */
 }
 header {
-  border: dashed 1px blue;
+  /* border: dashed 1px blue; */
 }
 section.episodes {
-  border: dashed 1px red;
+  /* border: dashed 1px red; */
 }
 section.history {
-  border: dashed 1px yellow;
+  /* border: dashed 1px yellow; */
 }
 
 section.stellar-guests {
-  border: dashed 1px crimson;
+  /* border: dashed 1px crimson; */
 }
 section.our-topics {
-  border: dashed 1px darksalmon;
+  /* border: dashed 1px darksalmon; */
 }
 section.last-novelties {
-  border: dashed 1px dimgray;
+  /* border: dashed 1px dimgray; */
 }
 footer {
-  border: dashed 1px dodgerblue;
+  padding: 5% 10%;
+  text-align: center;
+}
+footer p {
+  font-size: 14px;
+  color: #060a24;
+  letter-spacing: 3.5px;
+  line-height: 22px;
+}
+footer div {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
