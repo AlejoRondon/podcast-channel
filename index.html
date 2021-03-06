@@ -15,24 +15,45 @@
     <link rel="stylesheet" href="./styles/temp-styles.css" />
   </head>
   <body>
-    <nav><h3>I'm the nav section</h3></nav>
-    <header>
+    <nav class="side-section-margins">
+      <img src="images/logo36x36.svg" />
+      <div>
+        <input id="menu-checkbox" type="checkbox"/>
+        <label for="menu-checkbox" class="label-menu-checkbox">
+          <div class="menu-icon-container">
+            <div class="linea linea-top"></div>
+            <div class="linea linea-med"></div>
+            <div class="linea linea-low"></div>
+          </div>
+        </label>
+
+        <div class="menu-desplazable">
+          <ul>
+            <li><a href="#episodes">EPISODES</a></li>
+            <li><a href="#episodes">ABOUT US</a></li>
+            <li><a href="#episodes">INTERVIEWS</a></li>
+            <li><a href="#episodes">TOPICS</a></li>
+          </ul>
+          </label>  
+        </div>
+    </nav>
+    <header class="side-section-margins">
       <h3>I'm the header section</h3>
       <!-- <p>Hello world pale blue dot</p> -->
     </header>
-    <section class="episodes">
+    <section id="episodes" class="episodes side-section-margins">
       <h3>I'm the episodes section</h3>
     </section>
-    <section class="history">
+    <section id="history" class="history side-section-margins">
       <h3>I'm the history section</h3>
     </section>
-    <section class="stellar-guests">
+    <section id="stellar-guests" class="stellar-guests">
       <h3>I'm the stellar-guests section</h3>
     </section>
-    <section class="our-topics">
+    <section id="our-topics" class="our-topics side-section-margins">
       <h3>I'm the our-topics section</h3>
     </section>
-    <section class="last-novelties">
+    <section id="last-novelties" class="last-novelties side-section-margins">
       <h3>I'm the last-novelties section</h3>
     </section>
     <footer title="I'm the footer section">

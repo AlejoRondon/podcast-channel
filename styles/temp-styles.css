@@ -1,25 +1,43 @@
+/*-> General styles */
+
+/*-> Navbar styles */
 nav {
   border: dashed 1px green;
 }
+.menu-desplazable ul li {
+  /* background-color: rgba(255, 0, 0, 0.3); */
+}
+.menu-desplazable ul li:hover {
+}
+.menu-desplazable ul li a {
+  /* background-color: hotpink; */
+}
+/*-> Header styles */
 header {
   border: dashed 1px blue;
 }
+/*-> Episodes section styles */
 section.episodes {
   border: dashed 1px red;
 }
+/*-> History section styles */
 section.history {
   border: dashed 1px yellow;
 }
 
+/*-> Stellar guests section styles */
 section.stellar-guests {
   border: dashed 1px crimson;
 }
+/*-> Our topics section styles */
 section.our-topics {
   border: dashed 1px darksalmon;
 }
+/*-> Last novelties styles */
 section.last-novelties {
   border: dashed 1px dimgray;
 }
+/*-> Footer styles */
 footer {
   border: dashed 1px dodgerblue;
 }
@@ -30,6 +48,7 @@ footer div {
   background-color: gainsboro;
 }
 
+/*-> MEDIA QUERIES START FROM HERE */
 /* https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
 /* https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c */
 @media (min-width: 320px) {

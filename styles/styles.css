@@ -1,31 +1,150 @@
+/*-> General styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
-nav {
-  /* border: dashed 1px green; */
+.side-section-margins {
+  width: 90%;
+  margin: 0 auto;
 }
+
+/*-> Navbar styles */
+nav {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  padding: 10px 0;
+}
+
+.menu-desplazable {
+  position: fixed;
+  right: 0;
+  width: 100%;
+  top: 8%;
+  background-color: #0000ec;
+  cursor: pointer;
+  transform: translate(100%);
+  transition: all 0.4s ease;
+}
+
+.menu-desplazable ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style: none;
+}
+
+.menu-desplazable ul li a {
+  position: relative;
+  display: flex;
+  height: 100%;
+  padding: 6% 5%;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-desplazable ul li a:hover {
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+/* Deslizable menu animation */
+/*  https://stackoverflow.com/questions/26449590/make-css-pseudoelement-before-same-height-as-main-element*/
+.menu-desplazable ul li a:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease-out;
+}
+
+.menu-desplazable ul li a:hover:before {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-in;
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked ~ .menu-desplazable {
+  transform: translate(0);
+}
+
+.menu-icon-container {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.1rem;
+  cursor: pointer;
+}
+
+.linea {
+  height: 10%;
+  width: 75%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.linea-top {
+  top: 25%;
+}
+
+.linea-low {
+  /* transform: translate(-50%, -50%); */
+  top: 75%;
+}
+
+#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-med {
+  opacity: 0;
+}
+#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-top {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: red;
+}
+#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-low {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: red;
+}
+
+/*-> Header styles */
 header {
   /* border: dashed 1px blue; */
 }
+/*-> Episodes section styles */
 section.episodes {
   /* border: dashed 1px red; */
 }
+/*-> History section styles */
 section.history {
   /* border: dashed 1px yellow; */
 }
-
+/*-> Stellar guests section styles */
 section.stellar-guests {
   /* border: dashed 1px crimson; */
 }
+/*-> Our topics section styles */
 section.our-topics {
   /* border: dashed 1px darksalmon; */
 }
+/*-> Last novelties styles */
 section.last-novelties {
   /* border: dashed 1px dimgray; */
 }
+/*-> Footer styles */
 footer {
   padding: 5% 10%;
   text-align: center;
@@ -41,6 +160,7 @@ footer div {
   justify-content: space-between;
 }
 
+/*-> MEDIA QUERIES START FROM HERE */
 /* https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
 /* https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c */
 @media (min-width: 320px) {
