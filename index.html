@@ -66,5 +66,18 @@
         <i class="fa fa-telegram"></i>
       </div>
     </footer>
+    <script>
+      //DISABLE CHECKBOX ON LINK CLICKS - THIS SCRIPT IS ONLY FOR DEBUG PORPUSES
+      // Get a reference to every href
+      var myhrefs = myhref = Array.from(document.querySelectorAll("li a"));
+      // Get a reference to "checkbox".
+      var myfield = document.getElementById("menu-checkbox");
+      // Attach an event listener to every href, which gets notifier when "href" is clicked.
+      myhrefs.forEach((href)=>{
+        href.addEventListener("click", function() {
+          myfield.checked = false;
+      });
+      })
+  </script>
   </body>
 </html>
