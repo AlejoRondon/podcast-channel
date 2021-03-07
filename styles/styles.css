@@ -1,4 +1,4 @@
-/*-> General styles */
+/*-> General styles - Normalize*/
 * {
   margin: 0;
   padding: 0;
@@ -17,15 +17,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   top: 0;
-  height: 8vh;
-  /* padding: 10px 0; */
+  height: 6vh;
+}
+/* Mouse efect when mouse is over the logo icon */
+nav a img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
 }
 
 .menu-desplazable {
   position: fixed;
   right: 0;
   width: 100%;
-  top: 8vh;
+  top: 6vh;
   background-color: #0000ec;
   cursor: pointer;
   transform: translate(100%);
@@ -72,14 +76,13 @@ nav {
   transition: all 0.3s ease-in;
 }
 
+/* Checkbox custom styles */
 #menu-checkbox {
   display: none;
 }
-
 #menu-checkbox:checked ~ .menu-desplazable {
   transform: translate(0);
 }
-
 .menu-icon-container {
   position: relative;
   height: 2rem;
@@ -87,7 +90,6 @@ nav {
   padding: 0.1rem;
   cursor: pointer;
 }
-
 .linea {
   height: 10%;
   width: 75%;
@@ -102,12 +104,9 @@ nav {
 .linea-top {
   top: 25%;
 }
-
 .linea-low {
-  /* transform: translate(-50%, -50%); */
   top: 75%;
 }
-
 #menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-med {
   opacity: 0;
 }
