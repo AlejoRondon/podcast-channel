@@ -39,7 +39,7 @@ nav {
   height: 6vh;
   /* colors */
   background-color: white;
-  padding: 25px 0 !important;
+  padding: 25px 5% !important;
 }
 /* Mouse efect when mouse is over the logo icon */
 nav a img:hover {
@@ -145,7 +145,7 @@ nav a img:hover {
   background-color: red;
 }
 
-/*-> Header styles */
+/*->320px Header styles */
 header {
   padding: 24px 0;
   /* text-align: center; */
@@ -168,27 +168,55 @@ header .custom-button {
   margin: 36px auto 0; /*Center*/
 }
 
-/*-> Episodes section styles */
+/*->320px Episodes section styles */
 section.episodes {
-  /* border: dashed 1px red; */
+  position: relative;
 }
+.episodes .clip-path-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  clip-path: polygon(0% 3%, 100% 0, 100% 97%, 0% 100%);
+}
+.episodes .episodes-container {
+  position: relative;
+  margin: 20% 0 35% 0;
+}
+.episodes-container h1 {
+  color: white;
+  margin: 0 5% 20px;
+}
+.episodes-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-content: space-around; */
+  margin: 0 5%;
+}
+.episode-iframe {
+  width: 100%;
+  margin: 2% 0;
+}
+
 /*-> History section styles */
 section.history {
   /* border: dashed 1px yellow; */
 }
-/*-> Stellar guests section styles */
+/*->320px Stellar guests section styles */
 section.stellar-guests {
   /* border: dashed 1px crimson; */
 }
-/*-> Our topics section styles */
+/*->320px  Our topics section styles */
 section.our-topics {
   /* border: dashed 1px darksalmon; */
 }
-/*-> Last novelties styles */
+/*->320px  Last novelties styles */
 section.last-novelties {
   /* border: dashed 1px dimgray; */
 }
-/*-> Footer styles */
+/*->320px Footer styles */
 footer {
   padding: 5% 10%;
   text-align: center;
@@ -213,7 +241,7 @@ footer div {
 
 @media (min-width: 480px) {
   /* smartphones, Android phones, landscape iPhone */
-  /*->Navbar */
+  /*->480px Navbar */
   .menu-icon-container {
     display: none;
   }
@@ -235,7 +263,7 @@ footer div {
   .menu-desplazable ul li a:before {
     display: none;
   }
-  /*->Header */
+  /*->480px Header */
   header {
     padding: 24px 0;
     /* text-align: center; */
@@ -249,7 +277,7 @@ footer div {
 } */
 @media (min-width: 768px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
-  /*->Header */
+  /*->768px Header */
   header {
     padding: 100px 0 16px 0;
   }
@@ -266,17 +294,35 @@ footer div {
   header .custom-button {
     margin: 36px 0; /*Center*/
   }
+  /*->768px Episodes section styles */
+  .episodes .episodes-container {
+    position: relative;
+    margin: 15% 0 15% 0;
+  }
+  .episodes .clip-path-background {
+    clip-path: polygon(0% 7%, 100% 0, 100% 93%, 0% 100%);
+  }
+  .episode-iframe {
+    width: 47%;
+    margin: 1% 0;
+  }
 }
+
 @media (min-width: 1024px) {
   /*992 is also used*/
   /* big landscape tablets, laptops, and desktops */
-  /*->Navbar */
+  nav {
+    padding: 25px 6% !important;
+  }
+  .side-section-margins {
+    width: 80%;
+    margin: 0 auto;
+  }
+  /*->768px Navbar */
   .menu-desplazable ul li a {
     margin-left: 48px;
-    /* padding: 0; */
-    /* color: #060a24; */
   }
-  /*->Header */
+  /*->768px Header */
   header {
     padding: 130px 0 16px 0;
   }
@@ -293,7 +339,22 @@ footer div {
   header .custom-button {
     margin: 72px 0 0 0; /*Center*/
   }
+  /*->768px Episodes section styles */
+  .episodes .episodes-container {
+    position: relative;
+    margin: 6% 0 10% 0;
+  }
+  .episodes-container h1 {
+    margin: 0 10% 20px;
+  }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   /* hi-res laptops and desktops */
+  header p {
+    visibility: hidden;
+  }
+  header p:before {
+    visibility: visible;
+    max-width: 36%;
+  }
 }

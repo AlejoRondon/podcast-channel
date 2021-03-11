@@ -20,6 +20,12 @@ header {
 section.episodes {
   border: dashed 1px red;
 }
+.episodes-container {
+  border: dashed 1px white;
+}
+.episodes-container h1 {
+  border: dashed 1px cornflowerblue;
+}
 /*-> History section styles */
 section.history {
   border: dashed 1px yellow;
@@ -67,6 +73,6 @@ footer div {
   /*992 is also used*/
   /* big landscape tablets, laptops, and desktops */
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   /* hi-res laptops and desktops */
 }
