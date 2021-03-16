@@ -1,4 +1,4 @@
-/*-> General styles - Normalize*/
+/*-> General styles + Normalize*/
 /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap'); */
 * {
   margin: 0;
@@ -6,14 +6,10 @@
   box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
-/* body {
-  width: 100vw;
-} */
 .side-section-margins {
   width: 90%;
   margin: 0 auto;
 }
-
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 2.2rem;
@@ -29,25 +25,25 @@ p {
 
 /*->320px Navbar styles */
 nav {
-  /* flex properties */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   /* position */
   position: sticky;
   top: 0;
   z-index: 1;
+  /* flex properties */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   /* dimensions */
   height: 6vh;
   /* colors */
   background-color: white;
   padding: 25px 5% !important;
+  transition: all 0.3s ease-out;
 }
 /* Mouse efect when mouse is over the logo icon */
 nav a img:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in;
-  /* margin: 16px 0; */
 }
 
 .menu-desplazable {
@@ -55,7 +51,7 @@ nav a img:hover {
   z-index: 10;
   right: 0;
   width: 100%;
-  top: 7vh;
+  top: 7.5vh;
   background-color: #0000ec;
   cursor: pointer;
   transform: translate(100%);
@@ -185,7 +181,7 @@ section.episodes {
 
 .episodes .episodes-container {
   position: relative;
-  margin: 20% 0 35% 0;
+  padding: 20% 0 35% 0;
 }
 .episodes-container h1 {
   color: white;
@@ -306,7 +302,7 @@ section.last-novelties .container {
   flex-direction: column; */
   align-items: center;
   position: relative;
-  margin: 20% 0 20% 0;
+  padding: 20% 0 20% 0;
 }
 section.last-novelties h1 {
   text-align: center;
@@ -448,6 +444,8 @@ footer div {
 }
 @media (min-width: 1440px) {
   /* hi-res laptops and desktops */
+    .episodes .episodes-container {
+  /*->1366px Episodes section styles */
   header p {
     visibility: hidden;
   }
