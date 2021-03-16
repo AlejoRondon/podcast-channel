@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
-
+/* body {
+  width: 100vw;
+} */
 .side-section-margins {
   width: 90%;
   margin: 0 auto;
@@ -25,7 +27,7 @@ p {
   color: #060a24;
 }
 
-/*-> Navbar styles */
+/*->320px Navbar styles */
 nav {
   /* flex properties */
   display: flex;
@@ -53,7 +55,7 @@ nav a img:hover {
   z-index: 10;
   right: 0;
   width: 100%;
-  top: 6vh;
+  top: 7vh;
   background-color: #0000ec;
   cursor: pointer;
   transform: translate(100%);
@@ -164,8 +166,9 @@ header p:before {
   content: 'El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.';
   position: absolute;
 }
-header .custom-button {
-  margin: 36px auto 0; /*Center*/
+.custom-button {
+  margin: 36px auto 0;
+  /*Center*/
 }
 
 /*->320px Episodes section styles */
@@ -174,11 +177,12 @@ section.episodes {
 }
 .episodes .clip-path-background {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-color: blue;
   clip-path: polygon(0% 3%, 100% 0, 100% 97%, 0% 100%);
 }
+
 .episodes .episodes-container {
   position: relative;
   margin: 20% 0 35% 0;
@@ -199,32 +203,125 @@ section.episodes {
   width: 100%;
   margin: 2% 0;
 }
+@keyframes {
+}
 
-/*-> History section styles */
+/*->320px History section styles */
 section.history {
   /* border: dashed 1px yellow; */
+  margin-bottom: 54px;
+}
+
+section.history img {
+  position: relative;
+  display: block;
+  /* display: ; */
+  width: 320px;
+  margin: 0 auto;
+
+  margin-top: -100px;
+  /* background-color: red; */
+}
+section.history p {
+  text-align: justify;
+  /* font-family: IBMPlexMono; */
+  font-size: 14px;
+  color: #060a24;
+  /* letter-spacing: 0; */
+  line-height: 22px;
+  /* font-size: 14px; */
 }
 /*->320px Stellar guests section styles */
 section.stellar-guests {
   /* border: dashed 1px crimson; */
 }
+section.stellar-guests .images-container {
+  display: flex;
+  flex-flow: wrap;
+  margin: 20px 0;
+  background-color: blanchedalmond;
+}
+section.stellar-guests .images-container img {
+  width: 100%;
+}
 /*->320px  Our topics section styles */
 section.our-topics {
   /* border: dashed 1px darksalmon; */
 }
+.cards-container {
+  display: flex;
+  flex-flow: wrap column;
+  align-content: center;
+}
+.card-wrapper {
+  display: inline-block;
+  text-align: center;
+  /* background-color: blanchedalmond; */
+  width: 250px;
+  margin: 30px 0;
+}
+.card-image {
+  width: 104px;
+}
+.card-text {
+  display: block;
+  /* font-family: IBMPlexSans-SemiBold; */
+  font-weight: 600;
+  font-size: 24px;
+  color: #060a24;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@keyframes shine {
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+  }
+}
 /*->320px  Last novelties styles */
 section.last-novelties {
   /* border: dashed 1px dimgray; */
+  position: relative;
+}
+section.last-novelties .clip-path-background {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: blue;
+  clip-path: polygon(0% 10%, 100% 0, 100% 100%, 0% 100%);
+}
+section.last-novelties .container {
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  position: relative;
+  margin: 20% 0 20% 0;
+}
+section.last-novelties h1 {
+  text-align: center;
+  color: white;
+  margin: 0 5% 20px;
 }
 /*->320px Footer styles */
 footer {
-  padding: 5% 10%;
+  padding: 5% 8%;
   text-align: center;
 }
 footer p {
   font-size: 14px;
   color: #060a24;
-  letter-spacing: 3.5px;
+  letter-spacing: 1.2px;
   line-height: 22px;
 }
 footer div {
@@ -272,6 +369,7 @@ footer div {
     max-width: 100%;
   }
 }
+
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 /* @media (min-width: 640px) {
 } */
@@ -356,5 +454,114 @@ footer div {
   header p:before {
     visibility: visible;
     max-width: 36%;
+  }
+}
+/*?ANIMATIONS */
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  /* list-style: none; */
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: animate 25s linear infinite;
+  bottom: -100px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-3000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
   }
 }
