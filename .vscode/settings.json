@@ -1,0 +1,111 @@
+{
+  "better-comments.multilineComments": true,
+  "better-comments.highlightPlainText": false,
+  "better-comments.tags": [
+    //! error
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    /// warning
+    {
+      "tag": "/",
+      "color": "#FFFF00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    //see link
+    {
+      "tag": "see ",
+      "color": "#0000FF",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    //?question
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    //--striked
+    {
+      "tag": "--",
+      "color": "#474747",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    },
+    //~light
+    {
+      "tag": "~",
+      "color": "rgba(0, 255, 255, 0.1)",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    //*green
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    //|white
+    {
+      "tag": "|",
+      "color": "#ffffff",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    //-> section title
+    {
+      "tag": "-> ",
+      "color": "#0000FF",
+      "strikethrough": false,
+      "backgroundColor": "#FFFFFF"
+    },
+    //->320px
+    {
+      "tag": "->320px",
+      "color": "#0000FF",
+      "strikethrough": false,
+      "backgroundColor": "#8B9DC3"
+    },
+    //->480px
+    {
+      "tag": "->480px",
+      "color": "#0FFF00",
+      "strikethrough": false,
+      "backgroundColor": "#8B9DC3"
+    },
+    //->768px
+    {
+      "tag": "->768px",
+      "color": "#FF0000",
+      "strikethrough": false,
+      "backgroundColor": "#8B9DC3"
+    },
+    //->1024px
+    {
+      "tag": "->1024px",
+      "color": "#FFFF00",
+      "strikethrough": false,
+      "backgroundColor": "#8B9DC3"
+    },
+    //->1366px
+    {
+      "tag": "->1366px",
+      "color": "#FF00FF",
+      "strikethrough": false,
+      "backgroundColor": "#8B9DC3"
+    },
+    //->1440px
+    {
+      "tag": "->1440px",
+      "color": "#030600",
+      "strikethrough": false,
+      "backgroundColor": "#8B9DC3"
+    }
+  ]
+}
