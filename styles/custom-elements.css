@@ -1,3 +1,47 @@
+/*-> custome checkbox*/
+#menu-checkbox {
+  display: none;
+}
+#menu-checkbox:checked ~ .menu-desplazable {
+  transform: translate(0);
+}
+.menu-icon-container {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.1rem;
+  cursor: pointer;
+}
+.linea {
+  height: 10%;
+  width: 75%;
+  background-color: black;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.linea-top {
+  top: 25%;
+}
+.linea-low {
+  top: 75%;
+}
+#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-med {
+  opacity: 0;
+}
+#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-top {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: red;
+}
+#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-low {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: red;
+}
 /*-> custom-button element  */
 .custom-button {
   display: block;

@@ -1,11 +1,23 @@
-/*-> General styles + Normalize*/
-/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap'); */
+/*-> Global variables and fonts*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  /*~ Fonts */
+  --main-font: 'IBM Plex Sans', sans-serif;
+  --secondary-font: 'IBM Plex Mono', monospace;
+  /*~ colors */
+  --color-bg-clippath: #0000ec;
+}
+
+/*-> Mobile first + General styles + Normalize*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
+
 .side-section-margins {
   width: 90%;
   margin: 0 auto;
@@ -16,7 +28,6 @@ h1 {
   color: #060a24;
   font-weight: normal;
 }
-
 p {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.85rem;
@@ -25,17 +36,17 @@ p {
 
 /*->320px Navbar styles */
 nav {
-  /* position */
+  /*~ position */
   position: sticky;
   top: 0;
   z-index: 1;
-  /* flex properties */
+  /*~ flex properties */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* dimensions */
+  /*~ dimensions */
   height: 6vh;
-  /* colors */
+  /*~ colors */
   background-color: white;
   padding: 25px 5% !important;
   transition: all 0.3s ease-out;
@@ -45,26 +56,23 @@ nav a img:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in;
 }
-
 .menu-desplazable {
   position: fixed;
   z-index: 10;
   right: 0;
   width: 100%;
   top: 7.5vh;
-  background-color: #0000ec;
+  background-color: var(--color-bg-clippath);
   cursor: pointer;
   transform: translate(100%);
   transition: all 0.4s ease;
 }
-
 .menu-desplazable ul {
   display: flex;
   flex-direction: column;
   width: 100%;
   list-style: none;
 }
-
 .menu-desplazable ul li a {
   position: relative;
   display: flex;
@@ -73,14 +81,12 @@ nav a img:hover {
   color: white;
   text-decoration: none;
 }
-
 .menu-desplazable ul li a:hover {
   text-decoration: line-through;
   font-weight: 500;
 }
-
 /* Deslizable menu animation */
-/*  https://stackoverflow.com/questions/26449590/make-css-pseudoelement-before-same-height-as-main-element*/
+/*see  https://stackoverflow.com/questions/26449590/make-css-pseudoelement-before-same-height-as-main-element*/
 .menu-desplazable ul li a:before {
   position: absolute;
   content: '';
@@ -98,55 +104,9 @@ nav a img:hover {
   transition: all 0.3s ease-in;
 }
 
-/* Checkbox custom styles */
-#menu-checkbox {
-  display: none;
-}
-#menu-checkbox:checked ~ .menu-desplazable {
-  transform: translate(0);
-}
-.menu-icon-container {
-  position: relative;
-  height: 2rem;
-  width: 2rem;
-  padding: 0.1rem;
-  cursor: pointer;
-}
-.linea {
-  height: 10%;
-  width: 75%;
-  background-color: rgb(0, 0, 0);
-  border-radius: 10px;
-  transition: all 0.2s ease;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.linea-top {
-  top: 25%;
-}
-.linea-low {
-  top: 75%;
-}
-#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-med {
-  opacity: 0;
-}
-#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-top {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  background-color: red;
-}
-#menu-checkbox:checked + .label-menu-checkbox .menu-icon-container .linea-low {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  background-color: red;
-}
-
 /*->320px Header styles */
 header {
   padding: 24px 0;
-  /* text-align: center; */
 }
 header h1 {
   max-width: 80%;
@@ -156,7 +116,6 @@ header p {
   margin-top: 1rem;
   max-width: 100%;
 }
-
 header p:before {
   visibility: hidden;
   content: 'El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.';
@@ -178,7 +137,6 @@ section.episodes {
   background-color: blue;
   clip-path: polygon(0% 3%, 100% 0, 100% 97%, 0% 100%);
 }
-
 .episodes .episodes-container {
   position: relative;
   padding: 20% 0 35% 0;
@@ -199,15 +157,12 @@ section.episodes {
   width: 100%;
   margin: 2% 0;
 }
-@keyframes {
-}
 
 /*->320px History section styles */
 section.history {
   /* border: dashed 1px yellow; */
   margin-bottom: 54px;
 }
-
 section.history img {
   position: relative;
   display: block;
@@ -227,6 +182,7 @@ section.history p {
   line-height: 22px;
   /* font-size: 14px; */
 }
+
 /*->320px Stellar guests section styles */
 section.stellar-guests {
   /* border: dashed 1px crimson; */
@@ -240,6 +196,7 @@ section.stellar-guests .images-container {
 section.stellar-guests .images-container img {
   width: 100%;
 }
+
 /*->320px  Our topics section styles */
 section.our-topics {
   /* border: dashed 1px darksalmon; */
@@ -269,23 +226,7 @@ section.our-topics {
   text-align: center;
 }
 
-@keyframes shine {
-  10% {
-    opacity: 1;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
-  }
-  100% {
-    opacity: 0;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
-  }
-}
-/*->320px  Last novelties styles */
+/*->320px Last novelties styles */
 section.last-novelties {
   /* border: dashed 1px dimgray; */
   position: relative;
@@ -309,6 +250,7 @@ section.last-novelties h1 {
   color: white;
   margin: 0 5% 20px;
 }
+
 /*->320px Footer styles */
 footer {
   padding: 5% 8%;
@@ -326,14 +268,14 @@ footer div {
 }
 
 /*-> MEDIA QUERIES START FROM HERE */
-/* https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
-/* https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c */
-/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-/* @media (min-width: 320px) {
-} */
+/*see https://getflywheel.com/layout/css-breakpoints-responsive-design-how-to/ */
+/*see https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c */
 
+/*-- smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+/*-- @media (min-width: 320px) {} */
+
+/*->480px: smartphones, Android phones, landscape iPhone */
 @media (min-width: 480px) {
-  /* smartphones, Android phones, landscape iPhone */
   /*->480px Navbar */
   .menu-icon-container {
     display: none;
@@ -366,11 +308,11 @@ footer div {
   }
 }
 
-/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-/* @media (min-width: 640px) {
-} */
+/*-- portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+/*-- @media (min-width: 640px) {} */
+
+/*->768px: tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width: 768px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
   /*->768px Header */
   header {
     padding: 100px 0 16px 0;
@@ -402,21 +344,22 @@ footer div {
   }
 }
 
+/*->1024px(992 is also used): big landscape tablets, laptops, and desktops */
 @media (min-width: 1024px) {
-  /*992 is also used*/
-  /* big landscape tablets, laptops, and desktops */
-  nav {
-    padding: 25px 6% !important;
-  }
+  /*->1024px General*/
   .side-section-margins {
     width: 80%;
     margin: 0 auto;
   }
-  /*->768px Navbar */
+  /*->1024px Navbar*/
+  nav {
+    padding: 25px 6% !important;
+  }
+  /*->1024px Navbar */
   .menu-desplazable ul li a {
     margin-left: 48px;
   }
-  /*->768px Header */
+  /*->1024px Header */
   header {
     padding: 130px 0 16px 0;
   }
@@ -433,7 +376,7 @@ footer div {
   header .custom-button {
     margin: 72px 0 0 0; /*Center*/
   }
-  /*->768px Episodes section styles */
+  /*->1024px Episodes section styles */
   .episodes .episodes-container {
     position: relative;
     margin: 6% 0 10% 0;
@@ -442,9 +385,9 @@ footer div {
     margin: 0 10% 20px;
   }
 }
+
+/*->1366px hi-res laptops and desktops */
 @media (min-width: 1440px) {
-  /* hi-res laptops and desktops */
-    .episodes .episodes-container {
   /*->1366px Episodes section styles */
   header p {
     visibility: hidden;
@@ -454,7 +397,13 @@ footer div {
     max-width: 36%;
   }
 }
-/*?ANIMATIONS */
+
+/*->1440px hi-res laptops and desktops */
+@media (min-width: 1440px) {
+  /*->1440px Episodes section styles */
+}
+
+/*-> ANIMATIONS */
 .circles {
   position: absolute;
   top: 0;

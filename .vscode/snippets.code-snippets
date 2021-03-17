@@ -1,0 +1,123 @@
+{
+  // Place your podcast-channel workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  // "For Loop": {
+  //   "scope": "js",
+  //   "prefix": ["fora", "for-consta"],
+  //   "body": ["for (const ${2:element} of ${1:array}) {", "\t$0", "}"],
+  //   "description": "A for loop."
+  // },
+  //see https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+  //! cError
+  "cError": {
+    "prefix": ["c!"],
+    "body": ["$BLOCK_COMMENT_START! ${1:error} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for error."
+  },
+  /// cWarning
+  "cWarning": {
+    "prefix": ["c/"],
+    "body": ["$BLOCK_COMMENT_START/ ${1:warning} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for error."
+  },
+  //? cQuestion
+  "cQuestion": {
+    "prefix": ["c?"],
+    "body": ["$BLOCK_COMMENT_START? ${1:question} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for question."
+  },
+  //see cSee
+  "cSee": {
+    "prefix": ["c_"],
+    "body": ["$BLOCK_COMMENT_START see ${1:link} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for link."
+  },
+  //-- cStriked
+  "cStriked": {
+    "prefix": ["c--"],
+    "body": ["$BLOCK_COMMENT_START-- ${1:striked-text} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for striked."
+  },
+  //~ cLight
+  "cLight": {
+    "prefix": ["c~"],
+    "body": ["$BLOCK_COMMENT_START~ ${1:light-text} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for light text."
+  },
+  //* cGreen
+  "cGreen": {
+    "prefix": ["c*"],
+    "body": ["$BLOCK_COMMENT_START~ ${1:green-text} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for green text."
+  },
+  //| cWhite
+  "cWhite": {
+    "prefix": ["c|"],
+    "body": ["$BLOCK_COMMENT_START| ${1:white-text} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for white text."
+  },
+  //-> Section title
+  "cTitle": {
+    "prefix": ["c->"],
+    "body": ["$BLOCK_COMMENT_START-> ${1:section-title} $BLOCK_COMMENT_END"],
+    "description": "Fast commentary for white text."
+  },
+  //->320px
+  "c320px": {
+    "scope": "css",
+    "prefix": ["c320px"],
+    "body": ["$BLOCK_COMMENT_START->320px ${1:text}$BLOCK_COMMENT_END"],
+    "description": "Fast commentary for 320px media query."
+  },
+  //->480px
+  "c480px": {
+    "scope": "css",
+    "prefix": ["c480px"],
+    "body": ["$BLOCK_COMMENT_START->480px ${1:text}$BLOCK_COMMENT_END"],
+    "description": "Fast commentary for 480px media query."
+  },
+  //->768px
+  "c768px": {
+    "scope": "css",
+    "prefix": ["c768px"],
+    "body": ["$BLOCK_COMMENT_START->768px ${1:text}$BLOCK_COMMENT_END"],
+    "description": "Fast commentary for 768px media query."
+  },
+  //->1024px
+  "c1024px": {
+    "scope": "css",
+    "prefix": ["c1024px"],
+    "body": ["$BLOCK_COMMENT_START->1024px ${1:text}$BLOCK_COMMENT_END"],
+    "description": "Fast commentary for 1024px media query."
+  },
+  //->1366px
+  "c1366px": {
+    "scope": "css",
+    "prefix": ["c1366px"],
+    "body": ["$BLOCK_COMMENT_START->1366px ${1:text}$BLOCK_COMMENT_END"],
+    "description": "Fast commentary for 1366px media query."
+  },
+  //->1440px
+  "c1440px": {
+    "scope": "css",
+    "prefix": ["c1440px"],
+    "body": ["$BLOCK_COMMENT_START->1440px ${1:text}$BLOCK_COMMENT_END"],
+    "description": "Fast commentary for 1440px media query."
+  }
+}
