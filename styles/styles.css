@@ -546,9 +546,6 @@ footer div.icons a:hover {
 /*->1366px hi-res laptops and desktops */
 @media (min-width: 1440px) {
   /*->1366px Episodes section styles */
-  header p {
-    visibility: hidden;
-  }
   header p:before {
     visibility: visible;
     max-width: 36%;
