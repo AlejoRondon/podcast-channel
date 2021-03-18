@@ -17,15 +17,18 @@
   box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
-.side-section-margins {
-  width: 90%;
-  max-width: 1440px;
-  margin: 0 auto;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 .content-wrapper {
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .clip-path-background {
   position: absolute;
@@ -68,7 +71,7 @@ nav div.content-wrapper {
   align-items: center;
   justify-content: space-between;
   /*~ dimensions */
-  padding: 25px 5% !important;
+  padding: 25px 0;
   height: 6vh;
   /*~ colors */
   transition: all 0.3s ease-out;
@@ -107,6 +110,15 @@ nav div.content-wrapper a img:hover {
 .menu-desplazable ul li a:hover {
   text-decoration: line-through;
   font-weight: 500;
+}
+.menu-desplazable ul li a:active {
+  text-decoration: line-through;
+  color: rgba(6, 10, 36, 0.56);
+}
+.menu-desplazable ul li a:visited {
+  /* see https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector */
+  /* text-decoration: line-through; */
+  color: palevioletred;
 }
 /* Deslizable menu animation */
 /*see  https://stackoverflow.com/questions/26449590/make-css-pseudoelement-before-same-height-as-main-element*/
@@ -207,9 +219,11 @@ section.history p {
 /* section.stellar-guests {
 } */
 section.stellar-guests .images-container {
+  position: relative;
   /* ~Display & Flex */
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
   /* ~Margin & Padding */
   margin: 20px 0 50px;
   /* ~Background */
@@ -220,9 +234,8 @@ section.stellar-guests .images-container img {
 }
 
 /*->320px  Our topics section styles */
-section.our-topics {
-  /* border: dashed 1px darksalmon; */
-}
+/*~ section.our-topics {
+}*/
 .cards-container {
   display: flex;
   flex-flow: wrap column;
@@ -233,6 +246,14 @@ section.our-topics {
   text-align: center;
   width: 250px;
   margin: 30px 0;
+}
+.card-image {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.card-image:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
 }
 .card-text {
   display: block;
@@ -291,7 +312,6 @@ footer div {
   }
   .menu-desplazable {
     position: relative;
-    /* z-index: 10; */
     top: 0vh;
     transform: translate(0%);
     background-color: transparent;
@@ -300,7 +320,7 @@ footer div {
     flex-direction: row;
   }
   .menu-desplazable ul li a {
-    margin-left: 15px;
+    margin-left: 10px;
     padding: 0;
     color: #060a24;
   }
@@ -310,10 +330,14 @@ footer div {
   /*->480px Header */
   header {
     padding: 24px 0;
-    /* text-align: center; */
   }
   header h1 {
     max-width: 100%;
+  }
+  /*->480px Episodes section*/
+  section.episodes .content-wrapper {
+    position: relative;
+    padding: 20% 0 20% 0;
   }
 }
 
@@ -337,19 +361,49 @@ footer div {
     max-width: 68%;
   }
   header .custom-button {
-    margin: 36px 0; /*Center*/
+    margin: 36px 0;
+  }
+  /*->768px Navbar*/
+  .menu-desplazable ul li a {
+    margin-left: 48px;
   }
   /*->768px Episodes section styles */
-  .episodes .episodes-container {
-    position: relative;
-    margin: 15% 0 15% 0;
+  section.episodes .content-wrapper {
+    padding: 10% 0 10% 0;
   }
-  .episodes .clip-path-background {
-    clip-path: polygon(0% 7%, 100% 0, 100% 93%, 0% 100%);
+  section.episodes .clip-path-background {
+    clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0% 100%);
   }
   .episode-iframe {
     width: 47%;
     margin: 1% 0;
+  }
+  /*->768px History*/
+  section.history {
+    padding: 100px 0;
+  }
+  section.history img {
+    position: absolute;
+    right: 5%;
+    /* ~Margin & Padding */
+  }
+  section.history p {
+    text-align: justify;
+    width: 50%;
+  }
+  /*->768px Stellar guests*/
+  section.stellar-guests .images-container img {
+    width: 50%;
+  }
+  /*->768px Our topics*/
+  .cards-container {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+  }
+  /*->768px Last novelties*/
+  section.last-novelties .content-wrapper {
+    padding: 10% 0 10% 0;
   }
 }
 

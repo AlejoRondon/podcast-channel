@@ -120,6 +120,7 @@
     border-radius: 50%;
   }
 }
+/*-> Heart beat */
 @keyframes textheartbeat {
   0% {
     font-size: 0.75rem;
@@ -139,4 +140,36 @@
   100% {
     font-size: 0.75rem;
   }
+}
+/*-> Shine */
+.shine-animation {
+  overflow: hidden;
+}
+
+.shine-animation:after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Hover state - trigger effect */
+.shine-animation:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.shine-animation:active:after {
+  opacity: 0;
 }
