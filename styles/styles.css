@@ -62,7 +62,7 @@ nav {
   /*~ background */
   background-color: white;
 }
-nav div.content-wrapper {
+nav > div {
   /*~ position & dimensions*/
   position: relative;
   top: 0;
@@ -75,10 +75,13 @@ nav div.content-wrapper {
   height: 6vh;
   /*~ colors */
   transition: all 0.3s ease-out;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* Mouse efect when mouse is over the logo icon */
-nav div.content-wrapper a img:hover {
+nav div a img:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in;
 }
@@ -176,13 +179,13 @@ section.episodes .clip-path-background {
 }
 section.episodes .content-wrapper {
   position: relative;
-  padding: 20% 0 35% 0;
+  padding-top: 20%;
 }
 section.episodes .content-wrapper h1 {
   color: white;
   margin: 0 0 20px;
 }
-section.episodes-container {
+section.episodes .episodes-container {
   /* ~position */
   position: relative;
   /* ~Display and flex */
@@ -190,7 +193,10 @@ section.episodes-container {
   flex-wrap: wrap;
   justify-content: space-between;
   /* ~Margin and padding */
-  margin: 0 5%;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding-bottom: 30%;
 }
 .episode-iframe {
   /* visibility: hidden; */
@@ -283,18 +289,36 @@ section.last-novelties h1 {
 
 /*->320px Footer styles */
 footer {
-  padding: 5% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 8% 8%;
   text-align: center;
+
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 footer p {
-  font-size: 14px;
+  font-size: 12px;
   color: #060a24;
   letter-spacing: 1.2px;
-  line-height: 22px;
+  line-height: 3rem;
 }
-footer div {
+footer div.icons {
   display: flex;
   justify-content: space-between;
+}
+footer div.icons a {
+  color: black;
+  transition: all 0.5s ease-out;
+  transform: scale(1);
+}
+footer div.icons a:hover {
+  color: blue;
+  transition: all 0.2s ease-in;
+  transform: scale(1.2);
 }
 
 /*-> MEDIA QUERIES START FROM HERE */
@@ -335,9 +359,30 @@ footer div {
     max-width: 100%;
   }
   /*->480px Episodes section*/
+  /* section.episodes .episodes-container {
+    padding-bottom: 30%;
+  }
   section.episodes .content-wrapper {
-    position: relative;
-    padding: 20% 0 20% 0;
+    padding-top: 20%;
+  } */
+  /*->480px Our topics*/
+  .cards-container {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+  }
+  .card-wrapper {
+    width: 200px;
+  }
+
+  /*->480px Footer*/
+  footer p {
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    line-height: 3rem;
+  }
+  footer div.icons {
+    font-size: 20px;
   }
 }
 
@@ -369,7 +414,10 @@ footer div {
   }
   /*->768px Episodes section styles */
   section.episodes .content-wrapper {
-    padding: 10% 0 10% 0;
+    padding-top: 20%;
+  }
+  section.episodes .episodes-container {
+    padding-bottom: 20%;
   }
   section.episodes .clip-path-background {
     clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0% 100%);
@@ -381,50 +429,68 @@ footer div {
   /*->768px History*/
   section.history {
     padding: 100px 0;
+    margin-top: -100px;
+  }
+
+  section.history .content-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    left: 50%;
   }
   section.history img {
     position: absolute;
-    right: 5%;
-    /* ~Margin & Padding */
+    left: 7%;
   }
-  section.history p {
-    text-align: justify;
-    width: 50%;
-  }
+
   /*->768px Stellar guests*/
   section.stellar-guests .images-container img {
     width: 50%;
   }
   /*->768px Our topics*/
-  .cards-container {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
+  .card-wrapper {
+    width: 250px;
   }
   /*->768px Last novelties*/
   section.last-novelties .content-wrapper {
-    padding: 10% 0 10% 0;
+    padding: 20% 0 15% 0;
+  }
+  section.last-novelties .clip-path-background {
+    clip-path: polygon(0% 25%, 100% 0, 100% 100%, 0% 100%);
+  }
+  /*->768px Footer*/
+  footer {
+    flex-direction: row;
+    align-items: center;
+
+    padding: 4% 4%;
+  }
+  footer p {
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    line-height: 3rem;
+  }
+  footer div.icons {
+    width: 30%;
+    font-size: 20px;
   }
 }
 
 /*->1024px(992 is also used): big landscape tablets, laptops, and desktops */
 @media (min-width: 1024px) {
   /*->1024px General*/
-  .side-section-margins {
+  .content-wrapper {
     width: 80%;
-    margin: 0 auto;
   }
   /*->1024px Navbar*/
-  nav {
-    /* padding: 25px 6% !important; */
-  }
+
   /*->1024px Navbar */
   .menu-desplazable ul li a {
     margin-left: 48px;
   }
   /*->1024px Header */
   header {
-    padding: 130px 0 16px 0;
+    /* padding: 130px 0 16px 0; */
   }
   header h1 {
     font-size: 3.5rem;
@@ -437,16 +503,44 @@ footer div {
     max-width: 52%;
   }
   header .custom-button {
-    margin: 72px 0 0 0; /*Center*/
+    margin: 72px 0;
   }
   /*->1024px Episodes section styles */
-  .episodes .episodes-container {
-    position: relative;
-    margin: 6% 0 10% 0;
+  section.episodes .content-wrapper {
+    padding-top: 10%;
+  }
+  section.episodes .episodes-container {
+    padding-bottom: 10%;
   }
   .episodes-container h1 {
     margin: 0 10% 20px;
   }
+  /* section.episodes .clip-path-background {
+    clip-path: polygon(0% 12%, 100% 0, 100% 88%, 0% 100%);
+  } */
+  /*->1024px History*/
+  section.history img {
+    left: 20%;
+  }
+
+  /*->1024px Stellar guests*/
+  section.stellar-guests {
+    margin-top: 120px;
+  }
+  section.stellar-guests .images-container img {
+    width: 33%;
+  }
+  /*->1024px Our topics*/
+  .card-wrapper {
+    width: 200px;
+  }
+  /*->1024px Last novelties*/
+  section.last-novelties .content-wrapper {
+    padding: 15% 0 10% 0;
+  }
+  /* section.novelties .clip-path-background {
+    clip-path: polygon(0% 10%, 100% 0, 100% 0, 0% 100%);
+  } */
 }
 
 /*->1366px hi-res laptops and desktops */
