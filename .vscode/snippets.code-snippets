@@ -23,7 +23,19 @@
   //   "description": "A for loop."
   // },
   //see https://code.visualstudio.com/docs/editor/userdefinedsnippets
-
+  //css rule
+  "css_rule": {
+    "prefix": ["css_rule"],
+    "body": ["${1:selector}{\n/*~Position & dimensions*/\n${2}\n/*~Display settings*/\n${3}\n/*~Margins & padding*/\n${4}\n/*~Font settings*/\n${5}\n/*~Background & shadows*/\n${6}\n/*~Animations & transitions*/\n${7}\n/*~Others*/\n${8}\n}"],
+    "description": "Fast css rule template."
+  },
+  "css_rule320px": {
+    "prefix": ["css_rule320px"],
+    "body": [
+      "/*->320px ${1}*/\n${2:selector}{\n/*~Position & dimensions*/\n${3}\n/*~Display settings*/\n${4}\n/*~Margins & padding*/\n${5}\n/*~Font settings*/\n${6}\n/*~Background & shadows*/\n${7}\n/*~Animations & transitions*/\n${8}\n/*~Others*/\n${9}\n}"
+    ],
+    "description": "Fast css rule template."
+  },
   //! cError
   "cError": {
     "prefix": ["c!"],
