@@ -17,10 +17,25 @@
   box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
-
 .side-section-margins {
   width: 90%;
+  max-width: 1440px;
   margin: 0 auto;
+}
+.content-wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.clip-path-background {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: blue;
+}
+span.dot {
+  color: blue;
+  animation: textheartbeat 1s infinite;
 }
 h1 {
   font-family: 'IBM Plex Sans', sans-serif;
@@ -32,26 +47,35 @@ p {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.85rem;
   color: #060a24;
+  line-height: 22px;
 }
+
 /*->320px Navbar styles */
 nav {
   /*~ position */
   position: sticky;
   top: 0;
   z-index: 1;
+  /*~ background */
+  background-color: white;
+}
+nav div.content-wrapper {
+  /*~ position & dimensions*/
+  position: relative;
+  top: 0;
   /*~ flex properties */
   display: flex;
   align-items: center;
   justify-content: space-between;
   /*~ dimensions */
+  padding: 25px 5% !important;
   height: 6vh;
   /*~ colors */
-  background-color: white;
-  padding: 25px 5% !important;
   transition: all 0.3s ease-out;
 }
+
 /* Mouse efect when mouse is over the logo icon */
-nav a img:hover {
+nav div.content-wrapper a img:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in;
 }
@@ -60,7 +84,7 @@ nav a img:hover {
   z-index: 10;
   right: 0;
   width: 100%;
-  top: 7.5vh;
+  top: 8vh;
   background-color: var(--color-bg-clippath);
   cursor: pointer;
   transform: translate(100%);
@@ -96,15 +120,22 @@ nav a img:hover {
   background-color: rgba(255, 255, 255, 0);
   transition: all 0.3s ease-out;
 }
-
 .menu-desplazable ul li a:hover:before {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease-in;
 }
 
+/*->320px Main container styles*/
+/* main { */
+
+/* } */
+
 /*->320px Header styles */
-header {
+/* header{
+
+} */
+header div.content-wrapper {
   padding: 24px 0;
 }
 header h1 {
@@ -120,76 +151,68 @@ header p:before {
   content: 'El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.';
   position: absolute;
 }
-.custom-button {
+.button-position {
   margin: 36px auto 0;
-  /*Center*/
 }
 
 /*->320px Episodes section styles */
 section.episodes {
   position: relative;
 }
-.episodes .clip-path-background {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  background-color: blue;
+section.episodes .clip-path-background {
   clip-path: polygon(0% 3%, 100% 0, 100% 97%, 0% 100%);
 }
-.episodes .episodes-container {
+section.episodes .content-wrapper {
   position: relative;
   padding: 20% 0 35% 0;
 }
-.episodes-container h1 {
+section.episodes .content-wrapper h1 {
   color: white;
-  margin: 0 5% 20px;
+  margin: 0 0 20px;
 }
-.episodes-wrapper {
+section.episodes-container {
+  /* ~position */
   position: relative;
+  /* ~Display and flex */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* align-content: space-around; */
+  /* ~Margin and padding */
   margin: 0 5%;
 }
 .episode-iframe {
+  /* visibility: hidden; */
   width: 100%;
   margin: 2% 0;
 }
 
 /*->320px History section styles */
 section.history {
-  /* border: dashed 1px yellow; */
   margin-bottom: 54px;
 }
 section.history img {
+  /* ~position & dimensions*/
   position: relative;
-  display: block;
-  /* display: ; */
   width: 320px;
-  margin: 0 auto;
-
-  margin-top: -100px;
-  /* background-color: red; */
+  /* display*/
+  display: block;
+  /* ~Margin & Padding */
+  margin: -80px auto 0;
 }
 section.history p {
   text-align: justify;
-  /* font-family: IBMPlexMono; */
-  font-size: 14px;
-  color: #060a24;
-  /* letter-spacing: 0; */
-  line-height: 22px;
-  /* font-size: 14px; */
 }
 
 /*->320px Stellar guests section styles */
-section.stellar-guests {
-  /* border: dashed 1px crimson; */
-}
+/* section.stellar-guests {
+} */
 section.stellar-guests .images-container {
+  /* ~Display & Flex */
   display: flex;
   flex-flow: wrap;
-  margin: 20px 0;
+  /* ~Margin & Padding */
+  margin: 20px 0 50px;
+  /* ~Background */
   background-color: blanchedalmond;
 }
 section.stellar-guests .images-container img {
@@ -208,16 +231,11 @@ section.our-topics {
 .card-wrapper {
   display: inline-block;
   text-align: center;
-  /* background-color: blanchedalmond; */
   width: 250px;
   margin: 30px 0;
 }
-.card-image {
-  width: 104px;
-}
 .card-text {
   display: block;
-  /* font-family: IBMPlexSans-SemiBold; */
   font-weight: 600;
   font-size: 24px;
   color: #060a24;
@@ -227,20 +245,12 @@ section.our-topics {
 
 /*->320px Last novelties styles */
 section.last-novelties {
-  /* border: dashed 1px dimgray; */
   position: relative;
 }
 section.last-novelties .clip-path-background {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  background-color: blue;
   clip-path: polygon(0% 10%, 100% 0, 100% 100%, 0% 100%);
 }
-section.last-novelties .container {
-  /* display: flex;
-  flex-direction: column; */
-  align-items: center;
+section.last-novelties .content-wrapper {
   position: relative;
   padding: 20% 0 20% 0;
 }
@@ -352,7 +362,7 @@ footer div {
   }
   /*->1024px Navbar*/
   nav {
-    padding: 25px 6% !important;
+    /* padding: 25px 6% !important; */
   }
   /*->1024px Navbar */
   .menu-desplazable ul li a {
@@ -400,114 +410,4 @@ footer div {
 /*->1440px hi-res laptops and desktops */
 @media (min-width: 1440px) {
   /*->1440px Episodes section styles */
-}
-
-/*-> ANIMATIONS */
-.circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.circles li {
-  position: absolute;
-  display: block;
-  /* list-style: none; */
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.5);
-  animation: animate 25s linear infinite;
-  bottom: -100px;
-}
-
-.circles li:nth-child(1) {
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(2) {
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
-}
-
-.circles li:nth-child(3) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-
-.circles li:nth-child(4) {
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 18s;
-}
-
-.circles li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(6) {
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
-}
-
-.circles li:nth-child(7) {
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
-}
-
-.circles li:nth-child(8) {
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-
-.circles li:nth-child(9) {
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles li:nth-child(10) {
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-}
-
-@keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-
-  100% {
-    transform: translateY(-3000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
 }

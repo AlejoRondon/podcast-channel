@@ -4,6 +4,9 @@
 nav {
   border: dashed 1px green;
 }
+div.content-wrapper {
+  border: solid 1px palevioletred;
+}
 .menu-desplazable ul li {
   /* background-color: rgba(255, 0, 0, 0.3); */
 }
