@@ -234,7 +234,7 @@ section.stellar-guests .images-container {
   /* ~Margin & Padding */
   margin: 20px 0 50px;
   /* ~Background */
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
 }
 section.stellar-guests .images-container img {
   width: 100%;
